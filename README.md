@@ -1,4 +1,9 @@
-# Commandes Linux
+# Commandes Linux ( Commandes couramment utilisées )
+### Pour plus d'options, utiliser le manuel de chaque commande  
+- man "nom_de_la_commande"
+---
+---
+## Les commandes courantes Linux
 1. Commande "alias"
     - Fonction : Définit des raccourcis de commandes dans le fichier ~/.bashrc  
         > ll = 'ls -lah --color'  
@@ -23,3 +28,14 @@
         > cp -i fichier fichier2       : copier un fichier avec confirmation  
         > cp -r /dossier /user/dossier : copier un dossier et son contenu de maniere recursive  
         > cp -v                        : mode verbeux  
+
+5. Commande "ls"  
+    - Fonction :  liste le contenu des dossiers  
+        > ls -a : inclure les entrées débutant par « . »  
+        > ls -h : avec -l ou -s, afficher les tailles en format lisible  
+        > ls -l : utiliser un format d'affichage long  
+        > ls -S : trier selon la taille des fichiers en commençant par le plus gros  
+        - Possible de combiner les options  
+            > Ex : ls -lah  
+
+6. ...
