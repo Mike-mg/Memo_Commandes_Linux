@@ -4,64 +4,64 @@
 ---
 ---
 ## Les commandes courantes Linux
-17. Commande "pwd"
+1. Commande "pwd"
     - Fonction : Affiche le répertoire ou l'on se trouve
         - Commande :  
         `pwd` ( affiche ou l'on se trouve )  
 ---
-1. Commande "alias"
+2. Commande "alias"
     - Fonction : Définit des raccourcis de commandes dans le fichier ~/.bashrc  
         > ll = 'ls -lah --color'  
         > rm = 'rm -v'  
         > update = 'dnf update'  
 ---
-2. Commande "cat"  
+3. Commande "cat"  
     - Fonction : Affiche le contenu d'un fichier dans le terminal  
         - Commande :  
         `cat fichier` ( affiche le contenu du fichier )  
 ---
-3. Commande "cd"  
+4. Commande "cd"  
     - Fonction : Changer de répertoire  
         - Commande :  
-        `cd ..` ( accèder au répertoire parent )  
+        `cd ..` ( accèder au répertoire précedent )  
         `cd ~` ( accèder au répertoire de l'utilisateur )  
         `cd /usr/share` ( accèder au répertoire /usr/share de manière absolu )  
         `cd Vidéos` ( accéder au répertoire Vidéos de manière relative )   
 ---
-4. Commande "cp"  
+5. Commande "cp"  
     - Fonction : Permets de copier des répertoires et fichiers  
         - Commande :  
-        `cp fichier /dossier/` ( copier un fichier dans un répertoire )   
-        `cp -i fichier fichier2` ( copier un fichier avec confirmation )  
-        `cp -r dossier/ /dossier_2/` ( copier un dossier et son contenu dans un autre dossier )  
+        `cp fichier dossier` ( copier un fichier dans un répertoire )   
+        `cp fichier fichier2` ( copier un fichier sous un autre nom de fichier )  
+        `cp -r dossier dossier_2` ( copier un dossier et son contenu dans un autre dossier )  
         `cp -v` ( option de copie en mode verbeux )  
 ---
-16. Commande "mv"
+6. Commande "mv"
     - Fonction : Permet de déplacer ou renomer un fichier ou dossier  
         - Commande :  
         `mv fichier dossier/fichier` ( déplacer un fichier )  
         `mv fichier fichier_bis`  ( renomer un fichier )  
-        `mv dossier/ dossier_1/` ( déplacer un dossier )  
-        `mv dossier/ dossier_1/dossier_bis/` ( déplacer un dossier et le renomer )  
-        `mv dossier/ dossier_2` ( renome le dossier )  
+        `mv dossier dossier_1` ( déplacer un dossier )  
+        `mv dossier dossier_1/dossier_bis` ( déplacer un dossier et le renomer )  
+        `mv dossier dossier_2` ( renome le dossier )  
 ---
-18. Commande "rm"  
+7. Commande "rm"  
     - Fonction :  Supprimer un fichier ou un répertoire  
         - Commande : 
         `rm -i fichier` (supprime un fichier avec confirmation)  
         `rm -f fichier` ( force la suppression )  
-        `rm -R dossier/` ( supprime le dossier )  
+        `rm -R dossier` ( supprime le dossier )  
         - Option utile :  
         `rm -v` ( mode verbeux )  
 ---
-16. Commande "mkdir"
+8. Commande "mkdir"
     - Fonction : Permet de créer un dossier  
         - Commande :  
         `mkdir dossier` ( crée un dossier )  
         `mkdir dossier1 dossier2 dossier3` ( créé plusieurs dossiers en même temps )  
         `mkdir -p dossier/dossier1/dossier2` ( crée un dossier et dessous-répertoire avec l'option '-p' )  
 ---
-5. Commande "ls"  
+9. Commande "ls"  
     - Fonction :  liste le contenu des dossiers  
         - Commande :  
         `ls -a` ( inclure les entrées débutant par « . » )  
@@ -73,12 +73,12 @@
         - Possible de combiner les options  
             > Ex : `ls -lahSR --color`  
 ---
-7. Commande "file"  
+10. Commande "file"  
     - Fonction : Détermine le type d'un fichier  
         - Commande :  
         `file nom_du_fichier`  
 ---
-8. Commande "find"
+11. Commande "find"
     - Fonction : outils de recherche approfondie de fichiers  
         - Commande :  
         `find . -name "fichier"` ( cherche à partir du répertoire courant )  
@@ -89,7 +89,7 @@
         `find . -name "fichier" -delete` ( supprimer les fichiers trouvés )  
         `find . -name '*.jpg' -exec chmod 744 {} \;` ( cherche des fichiers et leur éxécute une commande )  
 ---
-9. Commande "grep"  
+12. Commande "grep"  
     - Fonction : recherche de fichier et dossier  
         - Commande :  
         `grep mot_chercher fichier` ( recherche le mot chercher dans un fichier )  
@@ -99,19 +99,19 @@
         `grep -c mot_chercher fichier` ( affiche le nombre de ligne )  
         `egrep [mM]ot_chercher fichier` ( recherche selon l'expression régilière )  
 ---
-10. Commande "head"  
+13. Commande "head"  
     - Fonction : lire les 'n' premières lignes d'un fichier  
         - Commande :  
         `head -2 nom_du_fichier` ( affiche les 2 premiere ligne du fichier )  
 ---
-11. Commande "tail"
+14. Commande "tail"
     - Fonction : lire les 'n' dernières lignes d'un fichier
         - Commande :  
         `tail -2 fichier` ( affiche les 2 dernieres lignes d'un fichier )
         - Option utile :  
         `tail -f` ( afficher les données ajoutées en temps réel lorsque le fichier est modifié )  
 ---
-12. Commande "less"  
+15. Commande "less"  
     - Fonction : paginer le contenue d'un fichier  
         - Commande :  
         `less fichier` ( affiche le fichier par pagination )  
@@ -122,7 +122,7 @@
             > Page suivante : 'barre espacement'  
             > Quitter : 'q'  
 ---
-13. Commande "more"
+16. Commande "more"
     - Fonction : afficher le contenu d'un fichier par page  
         - Commande :  
         `more fichier` ( afficher le fichier et paginer avec les fleches directionnelles)  
@@ -132,23 +132,23 @@
             > Page suivante : 'barre espacement'  
             > Quitter : 'q' 
 ---
-12. Commande "ln"  
+17. Commande "ln"  
     - Fonction : Crée un lien vers un fichier  
         - Commande :  
         `ln -s fichier fichier_raccourci` (lien raccourci symbolique )  
         `ln fichier fichier_lien` ( lien physique 'deux même fichiers' )  
 ---
-20. Commande ""
+18. Commande "touch"
     - Fonction : Créé un fichier vide ou vide un fichier  
         - Commande :  
         `touch  fichier` ( crée un fichier vide )  
 ---  
-21. Commande "tree"  
+19. Commande "tree"  
     - Fonction : Affiche l'arborescence d'un répertoire  
         - Commande :  
         `tree` ( affiche l'arborescence d'un répertoire)  
 ---  
-22. Commande "wc"  
+20. Commande "wc"  
     - Fonction : Affiche le nombre de ligne,mot,octet d'un fichier  
         - Commande :  
         `wc -l fichier` ( affiche le nombre de ligne )  
